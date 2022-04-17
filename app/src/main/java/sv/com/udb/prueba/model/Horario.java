@@ -10,10 +10,10 @@ public class Horario {
     @DatabaseField(generatedId = true)
     private Integer id;
 
-    @DatabaseField
+    @DatabaseField(columnName = "hora_inicio")
     private String horaInicio;
 
-    @DatabaseField
+    @DatabaseField(columnName = "hora_fin")
     private String horaFin;
 
     public Horario() {

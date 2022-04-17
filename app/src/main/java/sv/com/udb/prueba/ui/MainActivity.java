@@ -2,7 +2,9 @@ package sv.com.udb.prueba.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import java.sql.SQLException;
 
@@ -19,9 +21,35 @@ public class MainActivity extends AppCompatActivity {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         setTheme(R.style.Theme_PruebaPractica2);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+
+    public void onClick(View view){
+        switch(view.getId()){
+            case R.id.btnCita:
+                irCita();
+                break;
+            case R.id.btnReporte:
+                irReporte();
+                break;
+
+        }
+    }
+
+    private void irCita(){
+        Intent i = new Intent(this, CitaActivity.class);
+        startActivity(i);
+    }
+
+    private void irReporte(){
+
     }
 }

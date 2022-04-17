@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.Cita">
+    tools:context=".ui.CitaActivity">
 
     <TextView
         android:id="@+id/lblTitle"
@@ -43,23 +43,26 @@
             </com.google.android.material.textfield.TextInputLayout>
 
 
+            <Spinner
+                android:id="@+id/spTratamiento"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:spinnerMode="dialog"/>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Precio"
                 android:layout_marginBottom="10dp"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-                <EditText
+                <TextView
+                    android:padding="10dp"
                     android:id="@+id/txtPrecio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName" />
+                    android:textColor="@color/black"
+                    android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
-
-            <Spinner
-                android:id="@+id/spTratamiento"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"/>
 
             <Spinner
                 android:id="@+id/spHorario"
@@ -74,20 +77,28 @@
 
                 <Button
                     android:id="@+id/btnFecha"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:layout_marginBottom="25dp"
+                    android:layout_marginBottom="15dp"
                     android:fontFamily="@font/baloo2_bold"
-                    android:textSize="25dp"
                     android:textColor="@color/black"
-                    android:backgroundTint="#56A6A6"
+                    android:backgroundTint="#29b6f6"
                     android:text="Seleccionar fecha"/>
 
-                <TextView
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="60dp"
-                    android:text="txtFecha"/>
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <TextView
+                        android:padding="10dp"
+                        android:id="@+id/txtFecha"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
 
